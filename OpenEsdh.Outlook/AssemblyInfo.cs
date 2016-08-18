@@ -6,7 +6,6 @@
 [assembly: System.Reflection.AssemblyDescription("")]
 [assembly: System.Runtime.InteropServices.Guid("9de86001-5168-4bd5-9102-824a11594b5e")]
 [assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
-[assembly: System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.0", FrameworkDisplayName=".NET Framework 4")]
 [assembly: System.Reflection.AssemblyTitle("OpenEsdh.Outlook")]
 [assembly: System.Reflection.AssemblyConfiguration("")]
 [assembly: System.Reflection.AssemblyCompany("")]

@@ -5,7 +5,6 @@
 [assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
 [assembly: System.Runtime.InteropServices.Guid("58e22cae-0935-4917-8acd-a7b79512b775")]
 [assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
-[assembly: System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.0", FrameworkDisplayName=".NET Framework 4")]
 [assembly: System.Reflection.AssemblyTitle("OpenEsdh.Outlook.Attach")]
 [assembly: System.Reflection.AssemblyDescription("")]
 [assembly: System.Reflection.AssemblyConfiguration("")]

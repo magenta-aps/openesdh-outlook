@@ -9,7 +9,6 @@
 [assembly: System.Reflection.AssemblyTitle("OpenE Configuration")]
 [assembly: System.Reflection.AssemblyProduct("OpenEsdh.Configuration")]
 [assembly: System.Reflection.AssemblyCopyright("Copyright \x00a9  2015")]
-[assembly: System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.0", FrameworkDisplayName=".NET Framework 4")]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 [assembly: System.Runtime.InteropServices.Guid("ce434281-64c0-4654-b478-732491fc040b")]
 [assembly: System.Reflection.AssemblyFileVersion("1.0.0.0")]

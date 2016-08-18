@@ -4,7 +4,6 @@
 [assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
 [assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
-[assembly: System.Runtime.Versioning.TargetFramework(".NETFramework,Version=v4.0", FrameworkDisplayName=".NET Framework 4")]
 [assembly: System.Reflection.AssemblyTitle("OpenEsdh.2013.Outlook")]
 [assembly: System.Reflection.AssemblyTrademark("")]
 [assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute.DebuggingModes.EnableEditAndContinue | System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute.DebuggingModes.Default)]
