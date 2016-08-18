@@ -1,14 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.377</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>e8264c71-843a-4a0f-a8b2-639d63a57d5a</ProjectGuid>
+    <ProjectGuid>{E8264C71-843A-4A0F-A8B2-639D63A57D5A}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <AssemblyName>OpenEsdh.Outlook</AssemblyName>
     <OutputType>Library</OutputType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -19,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -28,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -112,18 +115,34 @@
     <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SaveAttachmentDelegate.cs" />
     <Compile Include="OpenEsdh\Outlook\Resources\OpenEsdh_Outlook.cs" />
     <Compile Include="OpenEsdh\Outlook\Views\Interface\IApplicationSaveAsView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OfficeApplications\SaveAs.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OfficeApplications\SaveAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OpenEsdh\Outlook\Views\Interface\IDisplayRegionControl.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OutlookPropertiesControl.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OutlookPropertiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="OpenEsdh\Outlook\Views\Interface\ISaveAsView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OutlookSaveView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\ApplicationSaveAsView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OutlookSaveView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\ApplicationSaveAsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OpenEsdh\Outlook\Views\Interface\IAttachFileView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\AttachFileView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\DisplayRegionControl.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\AttachFileView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\DisplayRegionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="OpenEsdh\Outlook\Views\Interface\ISaveAsBrowserView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\SaveAsView.cs" />
-    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\AlfrescoBrowser.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\SaveAsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\AlfrescoBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\CancelEventArgs.cs" />
     <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\SaveEventArgs.cs" />
     <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\SetSizeEventArgs.cs" />

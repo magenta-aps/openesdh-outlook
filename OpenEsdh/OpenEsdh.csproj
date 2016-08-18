@@ -1,14 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.377</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b53bd490-3379-422c-8f5b-83850440044e</ProjectGuid>
+    <ProjectGuid>{B53BD490-3379-422C-8F5B-83850440044E}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <AssemblyName>OpenEsdh</AssemblyName>
     <OutputType>Library</OutputType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -19,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -28,13 +30,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="SharpShell" />
+    <Reference Include="SharpShell, Version=2.2.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpShell.2.2.0.0\lib\net40\SharpShell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Configuration" />
-    <Reference Include="OpenEsdh.Outlook" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
@@ -44,7 +49,9 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="OpenEsdh\ContextMenu.cs" />
-    <Compile Include="OpenEsdh\ExplorerInstaller.cs" />
+    <Compile Include="OpenEsdh\ExplorerInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="OpenEsdh\Model\DocumentConverter.cs" />
     <Compile Include="OpenEsdh\Model\Implementation\WordConfiguration.cs" />
     <Compile Include="OpenEsdh\Presentation\Interface\IExplorerPresenter.cs" />
@@ -53,9 +60,24 @@
     <Compile Include="OpenEsdh\Properties\Resources.cs" />
     <Compile Include="OpenEsdh\ServerManagerApi.cs" />
     <Compile Include="OpenEsdh\ServerEntry.cs" />
-    <Compile Include="OpenEsdh\TestForm.cs" />
+    <Compile Include="OpenEsdh\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="OpenEsdh.ExplorerInstaller.resources" />
     <EmbeddedResource Include="OpenEsdh.Properties.Resources.resources" />
     <EmbeddedResource Include="OpenEsdh.TestForm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenEsdh.2013.Outlook\OpenEsdh.2013.Outlook.csproj">
+      <Project>{210f6dfa-8827-4b45-b58b-dcd1eb9bef07}</Project>
+      <Name>OpenEsdh.2013.Outlook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenEsdh.Outlook\OpenEsdh.Outlook.csproj">
+      <Project>{e8264c71-843a-4a0f-a8b2-639d63a57d5a}</Project>
+      <Name>OpenEsdh.Outlook</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
