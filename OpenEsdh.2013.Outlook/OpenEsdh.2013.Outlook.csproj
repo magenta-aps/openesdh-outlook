@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>210f6dfa-8827-4b45-b58b-dcd1eb9bef07</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>OpenEsdh.2013.Outlook</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Outlook.v4.0.Utilities" />
+    <Reference Include="Microsoft.Office.Tools.Outlook" />
+    <Reference Include="OpenEsdh.Outlook" />
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.Office.Tools.Common" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime" />
+    <Reference Include="Microsoft.Office.Tools" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Presentation\Interface\ISaveEmailButtonView.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\ContextMenu.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Model\IAttachmentService.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Model\AttachmentService.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Model\MailConverter.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Model\OutlookObject.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\OpenESDHIcon.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\WindowFormRegionCollection.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\OpenESDHRegion.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\OpenESDHRibbon.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\ThisRibbonCollection.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Presentation\Interface\IAttachFilePresenter.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Presentation\Implementation\AttachFilePresenter.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Presentation\Interface\ISaveEmailPresenter.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Presentation\Implementation\SaveEmailPresenter.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Properties\Resources.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Properties\Settings.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\ThisAddIn.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\Globals.cs" />
+    <Compile Include="OpenEsdh\_2013\Outlook\ThisFormRegionCollection.cs" />
+    <EmbeddedResource Include="OpenEsdh._2013.Outlook.OpenESDHIcon.resources" />
+    <EmbeddedResource Include="OpenEsdh._2013.Outlook.OpenESDHRegion.resources" />
+    <EmbeddedResource Include="OpenEsdh._2013.Outlook.OpenESDHRibbon.resources" />
+    <EmbeddedResource Include="OpenEsdh._2013.Outlook.Properties.Resources.resources" />
+    <EmbeddedResource Include="OpenEsdh._2013.Outlook.ContextMenu.xml" />
+  </ItemGroup>
+</Project>

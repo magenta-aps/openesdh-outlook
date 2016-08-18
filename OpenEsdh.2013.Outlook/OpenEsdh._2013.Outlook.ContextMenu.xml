@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabNewMailMessage">
+        <group id="group1" insertBeforeMso="GroupSend"  getLabel="GetGroupLabel">
+          <button id="btnSaveFile" onAction="btnSaveAsSend"  getLabel="GetSaveSendLabel" size="large" getImage="getImageLarge" getEnabled="GetEnabled"  />
+          <button id="btnAttachFile" onAction="btnAttachFile"  getLabel="GetAttachFileLabel" size="large" getImage="getImageLarge" getEnabled="GetEnabled" visible="false"  />
+        </group>
+      </tab>
+      <tab idMso="TabReadMessage">
+        <group id="group2" insertBeforeMso="GroupRespond" getLabel="GetGroupLabel">
+          <button id="btnSaveAsSend" onAction="btnSaveFile" getLabel="GetSaveFileLabel" size="large" getImage="getImageLarge" getEnabled="GetEnabled" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+
+  <contextMenus>
+    <contextMenu idMso="ContextMenuMailItem">
+      <button id="OpenESDHMailItem" label="Gem i Visma Case" getImage="getImage" onAction="SaveToOpenESDH" insertAfterMso="FindAllRelatedMenu" />
+      <menuSeparator id="SplitButton"  insertAfterMso="FindAllRelatedMenu"></menuSeparator>
+    </contextMenu>
+  </contextMenus>
+</customUI>
+

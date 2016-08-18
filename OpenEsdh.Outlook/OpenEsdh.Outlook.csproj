@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e8264c71-843a-4a0f-a8b2-639d63a57d5a</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>OpenEsdh.Outlook</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\EndUploadRequest.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\IAlfrescoFilePost.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\UploadFile.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\AlfrescoFilePost.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\ApplicationPackage.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\DocumentIdPackage.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\UploadFileApplication.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Alfresco\UrlTokenReplacer.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\ApplicationDescriptor.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\SetMailPropertyDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\AddMailPropertyDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\AddFileDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\IAttachEmail.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\AttachEmail.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Attachment.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\SelectableAttachment.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\BrowserVersion\BrowserEmulationVersion.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\BrowserVersion\InternetExplorerBrowserEmulation.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Constants.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\IConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\SendDataMethod.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\ICommunicationConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\IExtendDialog.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\IDisplayRegionConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\IPreAuthenticateConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\IWordConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Interface\IOutlookConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Implementation\OutlookConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Implementation\PreAuthenticationConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Implementation\DisplayRegionConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Implementation\CommunicationConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Implementation\ExtendDialog.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Configuration\Implementation\WordConfiguration.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Container\TypeResolver.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Container\WordResolver.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Container\OutlookResolver.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\EmailAddress.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\EmailDescriptor.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Logging\Logger.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\IPreAuthenticator.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\PreAuthenticator.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\Resources\ResourceResolver.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\ServerCertificate\ICookieJar.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\ServerCertificate\CookieJar.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\ServerCertificate\ImpersonationContext.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\ServerCertificate\GenericDelegate!2.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\ServerCertificate\GenericDelegate!3.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\ServerCertificate\StringConstants.cs" />
+    <Compile Include="OpenEsdh\Outlook\Model\ServerCertificate\TokenFetcher2.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\ServerCertificate\WindowsInterop.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\IApplicationSaveAsPresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Implementation\ApplicationSaveAsPresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\IApplicationSavePresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Implementation\ApplicationSavePresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\IAttachFilePresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Implementation\AttachFilePresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\IDisplayRegionPresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Implementation\DisplayRegionPresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\ISaveAsPresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Implementation\SaveAsPresenter.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Implementation\UploadTicket.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\UploadFileDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SaveDocumentDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SetDocumentIDDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\AttachFileCallback.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SetMessageClassDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SetMessageIDDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\UploadMailFileDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SaveMailBodyDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\SaveAttachmentDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Resources\OpenEsdh_Outlook.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Interface\IApplicationSaveAsView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OfficeApplications\SaveAs.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Interface\IDisplayRegionControl.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OutlookPropertiesControl.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Interface\ISaveAsView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\OutlookSaveView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\ApplicationSaveAsView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Interface\IAttachFileView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\AttachFileView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\DisplayRegionControl.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Interface\ISaveAsBrowserView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\SaveAsView.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\AlfrescoBrowser.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\CancelEventArgs.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\SaveEventArgs.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\SetSizeEventArgs.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\SaveDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\CancelDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Implementation\Utilities\SetSizeDelegate.cs" />
+    <Compile Include="OpenEsdh\Outlook\Views\Interface\IDisplayRegion.cs" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.g.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.OfficeApplications.SaveAs.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.OutlookPropertiesControl.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.OutlookSaveView.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.Utilities.AlfrescoBrowser.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.ApplicationSaveAsView.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.AttachFileView.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.DisplayRegionControl.resources" />
+    <EmbeddedResource Include="OpenEsdh.Outlook.Views.Implementation.SaveAsView.resources" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b53bd490-3379-422c-8f5b-83850440044e</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>OpenEsdh</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="SharpShell" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="OpenEsdh.Outlook" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="OpenEsdh\ContextMenu.cs" />
+    <Compile Include="OpenEsdh\ExplorerInstaller.cs" />
+    <Compile Include="OpenEsdh\Model\DocumentConverter.cs" />
+    <Compile Include="OpenEsdh\Model\Implementation\WordConfiguration.cs" />
+    <Compile Include="OpenEsdh\Presentation\Interface\IExplorerPresenter.cs" />
+    <Compile Include="OpenEsdh\Presentation\Implementation\ExplorerPresenter.cs" />
+    <Compile Include="OpenEsdh\Presentation\Interface\IExplorerView.cs" />
+    <Compile Include="OpenEsdh\Properties\Resources.cs" />
+    <Compile Include="OpenEsdh\ServerManagerApi.cs" />
+    <Compile Include="OpenEsdh\ServerEntry.cs" />
+    <Compile Include="OpenEsdh\TestForm.cs" />
+    <EmbeddedResource Include="OpenEsdh.ExplorerInstaller.resources" />
+    <EmbeddedResource Include="OpenEsdh.Properties.Resources.resources" />
+    <EmbeddedResource Include="OpenEsdh.TestForm.resources" />
+  </ItemGroup>
+</Project>
