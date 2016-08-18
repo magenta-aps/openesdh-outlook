@@ -33,7 +33,7 @@
                 MailItem _item = null;
                 if ((args != null) && (args.Length > 0))
                 {
-                    Exception exception;
+                    System.Exception exception;
                     try
                     {
                         Process[] processesByName = Process.GetProcessesByName("OUTLOOK");
@@ -55,7 +55,7 @@
                             activeObject = (Application) Marshal.GetActiveObject("Outlook.Application");
                         }
                     }
-                    catch (Exception exception1)
+                    catch (System.Exception exception1)
                     {
                         exception = exception1;
                         Logger.Current.LogException(exception, "");
@@ -156,7 +156,7 @@
                             TypeResolver.Current.Create<IAttachEmail>().AddAttachmentConfiguration(configurationSettings, setProperty, addProperty, addFile);
                         }
                     }
-                    catch (Exception exception2)
+                    catch (System.Exception exception2)
                     {
                         exception = exception2;
                         Logger.Current.LogException(exception, "");
