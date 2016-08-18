@@ -8,13 +8,15 @@
     using OpenEsdh.Outlook.Presenters.Implementation;
     using OpenEsdh.Outlook.Views.Implementation.OfficeApplications;
     using OpenEsdh.Outlook.Views.ServerCertificate;
+    using OpenEsdh.Outlook.Views.Interface;
+    using Presenters.Interface;
     using System;
     using System.Configuration;
     using System.Net;
     using System.Net.Security;
     using System.Reflection;
     using System.Security.Cryptography.X509Certificates;
-
+        
     public class WordResolver : TypeResolver, IDisposable
     {
         private Type _configurationFileOwner = null;

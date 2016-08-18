@@ -88,8 +88,9 @@
                             {
                                 Upload.UploadFile(unknown, filename, name);
                             }
-                            catch (Exception exception)
+                            catch (Exception exception0)
                             {
+                                exception = exception0;
                                 Logger.Current.LogException(exception, "");
                                 throw exception;
                             }
@@ -108,8 +109,9 @@
                                 {
                                     Upload.UploadFile(unknown, filename, name);
                                 }
-                                catch (Exception exception)
+                                catch (Exception exception0)
                                 {
+                                    exception = exception0;
                                     Logger.Current.LogException(exception, "");
                                     throw exception;
                                 }
