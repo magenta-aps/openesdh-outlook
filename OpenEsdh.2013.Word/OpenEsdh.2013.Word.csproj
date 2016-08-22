@@ -33,9 +33,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup />
-  <PropertyGroup>
-    <ApplicationManifest>OpenEsdh.2013.Word.dll.manifest</ApplicationManifest>
-  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
@@ -77,9 +74,6 @@
       <Project>{e8264c71-843a-4a0f-a8b2-639d63a57d5a}</Project>
       <Name>OpenEsdh.Outlook</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="OpenEsdh.2013.Word.dll.manifest" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>
