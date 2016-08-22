@@ -30,6 +30,7 @@
         [DebuggerNonUserCode, EditorBrowsable(EditorBrowsableState.Never)]
         public ThisAddIn(ApplicationFactory factory, IServiceProvider serviceProvider) : base((Microsoft.Office.Tools.Factory) factory, serviceProvider, "AddIn", "ThisAddIn")
         {
+            sys.Diagnostics.Debugger.Launch();
             this.missing = Type.Missing;
             Globals.Factory = factory;
         }
