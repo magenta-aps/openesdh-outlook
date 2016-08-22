@@ -7,8 +7,8 @@
     public interface IWordPresenter
     {
         void Load(Microsoft.Office.Interop.Word.Document document);
-        void Save([Dynamic] object Context);
-        void SaveAs([Dynamic] object Context);
+        void Save(dynamic Context);
+        void SaveAs(dynamic Context);
 
         IWordView View { get; set; }
     }

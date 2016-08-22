@@ -12,7 +12,7 @@
     using System.ComponentModel;
     using System.Diagnostics;
     using System.Runtime.InteropServices;
-    using System.Windows.Forms;
+    using forms = System.Windows.Forms;
 
     public class OpenESDHRibbon : RibbonBase, IWordView
     {
@@ -160,7 +160,7 @@
                     {
                         if ((Process.GetCurrentProcess() != null) && (1 != 0))
                         {
-                            System.Windows.Forms.Application.DoEvents();
+                            forms.Application.DoEvents();
                         }
                     }
                     catch
@@ -169,10 +169,10 @@
                 }
                 else
                 {
-                    System.Windows.Forms.Application.DoEvents();
+                    forms.Application.DoEvents();
                     Globals.ThisAddIn.Application.ScreenRefresh();
                     Globals.ThisAddIn.Application.ScreenUpdating = true;
-                    System.Windows.Forms.Application.DoEvents();
+                    forms.Application.DoEvents();
                 }
             }
         }

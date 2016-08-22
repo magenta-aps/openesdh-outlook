@@ -16,6 +16,9 @@
     {
         public static ApplicationDescriptor ToDescriptor(this Microsoft.Office.Interop.Word.Document document)
         {
+            // TODO: Restore this code in OpenEsdh._2013.Word.Model.DocumentConverter.ToDescriptor(..)
+            return new ApplicationDescriptor();
+            /*
             try
             {
                 ApplicationDescriptor descriptor = new ApplicationDescriptor {
@@ -65,7 +68,7 @@
             {
                 Logger.Current.LogException(exception, "");
                 return null;
-            }
+            }*/
         }
     }
 }

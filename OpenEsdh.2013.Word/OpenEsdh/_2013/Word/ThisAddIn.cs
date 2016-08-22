@@ -14,7 +14,8 @@
     using System.ComponentModel;
     using System.Diagnostics;
     using System.Security.Permissions;
-    using System.Windows.Forms;
+    using forms = System.Windows.Forms;
+    using sys = System;
 
     [StartupObject(0), PermissionSet(SecurityAction.Demand, Name="FullTrust")]
     public sealed class ThisAddIn : AddInBase
@@ -29,7 +30,7 @@
         [DebuggerNonUserCode, EditorBrowsable(EditorBrowsableState.Never)]
         public ThisAddIn(ApplicationFactory factory, IServiceProvider serviceProvider) : base((Microsoft.Office.Tools.Factory) factory, serviceProvider, "AddIn", "ThisAddIn")
         {
-            this.missing = System.Type.Missing;
+            this.missing = Type.Missing;
             Globals.Factory = factory;
         }
 
@@ -67,7 +68,7 @@
             base.Initialize();
             this.Application = base.GetHostItem<Microsoft.Office.Interop.Word.Application>(typeof(Microsoft.Office.Interop.Word.Application), "Application");
             Globals.ThisAddIn = this;
-            System.Windows.Forms.Application.EnableVisualStyles();
+            forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
             this.InitializeComponents();

@@ -44,7 +44,7 @@
             return null;
         }
 
-        public void Save([Dynamic] object Context)
+        public void Save(dynamic Context)
         {
             Exception exception;
             try
@@ -66,7 +66,7 @@
                                     string str = Path.GetTempFileName() + ".docx";
                                     object fileName = str;
                                     object fileFormat = Microsoft.Office.Interop.Word.WdSaveFormat.wdFormatDocument;
-                                    document.SaveAs2(ref fileName, ref fileFormat, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value);
+                                    document.SaveAs2(ref fileName, ref fileFormat);
                                 }
                                 else
                                 {
@@ -115,7 +115,7 @@
             }
         }
 
-        public void SaveAs([Dynamic] object Context)
+        public void SaveAs(dynamic Context)
         {
             try
             {
@@ -134,7 +134,7 @@
                                 string str = Path.ChangeExtension(Path.GetTempFileName(), "docx");
                                 object fileName = str;
                                 object fileFormat = Microsoft.Office.Interop.Word.WdSaveFormat.wdFormatXMLDocument;
-                                document.SaveAs(ref fileName, ref fileFormat, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value, ref Missing.Value);
+                                document.SaveAs(ref fileName, ref fileFormat);
                             }
                             else
                             {
