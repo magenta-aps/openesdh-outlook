@@ -17,15 +17,16 @@
         public static ApplicationDescriptor ToDescriptor(this Microsoft.Office.Interop.Word.Document document)
         {
             // TODO: Restore this code in OpenEsdh._2013.Word.Model.DocumentConverter.ToDescriptor(..)
-            return new ApplicationDescriptor();
-            /*
+            
+            
             try
             {
                 ApplicationDescriptor descriptor = new ApplicationDescriptor {
                     Author = Thread.CurrentPrincipal.Identity.Name,
                     Name = Path.Combine(document.Path, document.Name),
-                    Title = document.Name
+                    Title = document.Name,
                 };
+                /*
                 foreach (dynamic obj2 in (IEnumerable) document.BuiltInDocumentProperties)
                 {
                     try
@@ -40,10 +41,12 @@
                     {
                     }
                 }
+                */
                 foreach (dynamic obj2 in (IEnumerable) document.CustomDocumentProperties)
                 {
                     try
                     {
+                        /*
                         if (<ToDescriptor>o__SiteContainer0.<>p__Site7 == null)
                         {
                             <ToDescriptor>o__SiteContainer0.<>p__Site7 = CallSite<Func<CallSite, object, bool>>.Create(Binder.UnaryOperation(CSharpBinderFlags.None, ExpressionType.IsTrue, typeof(DocumentConverter), new CSharpArgumentInfo[] { CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, null) }));
@@ -57,6 +60,7 @@
                             <ToDescriptor>o__SiteContainer0.<>p__Sited = CallSite<Func<CallSite, Type, object, object, KeyValuePair<string, string>>>.Create(Binder.InvokeConstructor(CSharpBinderFlags.None, typeof(DocumentConverter), new CSharpArgumentInfo[] { CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.IsStaticType | CSharpArgumentInfoFlags.UseCompileTimeType, null), CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, null), CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.None, null) }));
                         }
                         descriptor.MetaData.Add(<ToDescriptor>o__SiteContainer0.<>p__Sited.Target(<ToDescriptor>o__SiteContainer0.<>p__Sited, typeof(KeyValuePair<string, string>), obj2.Name, obj2.Value.ToString()));
+                        */
                     }
                     catch
                     {
@@ -68,7 +72,7 @@
             {
                 Logger.Current.LogException(exception, "");
                 return null;
-            }*/
+            }
         }
     }
 }
