@@ -76,6 +76,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <!--
     This section defines properties that are set when the "Release" configuration is selected.
@@ -171,15 +172,40 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="OpenEsdh\_2013\Word\ThisRibbonCollection.cs" />
-    <Compile Include="OpenEsdh\Outlook\Presenters\Interface\ISavePresenter.cs" />
+    <Compile Include="Outlook\Presenters\Interface\ISavePresenter.cs" />
     <Compile Include="OpenEsdh\_2013\Word\Presentation\Interface\IWordPresenter.cs" />
     <Compile Include="OpenEsdh\_2013\Word\Presentation\Implementation\WordPresenter.cs" />
-    <Compile Include="OpenEsdh\_2013\Word\Properties\Resources.cs" />
-    <Compile Include="OpenEsdh\_2013\Word\Properties\Settings.cs" />
-    <Compile Include="OpenEsdh\_2013\Word\Globals.cs" />
+    <Compile Include="Properties\OpenEsdh._2013.Word.OpenESDHRibbon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenEsdh._2013.Word.OpenESDHRibbon.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="Properties\OpenEsdh._2013.Word.OpenESDHRibbon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OpenEsdh._2013.Word.OpenESDHRibbon.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="SampleWordVSTO_TemporaryKey.pfx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
@@ -188,8 +214,6 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-    <EmbeddedResource Include="OpenEsdh._2013.Word.OpenESDHRibbon.resources" />
-    <EmbeddedResource Include="OpenEsdh._2013.Word.Properties.Resources.resources" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
